@@ -32,7 +32,7 @@ app.get("/books", (req, res) => {
 });
 
 // book by id
-app.get("/books:id", (req, res) => {
+app.get("/books/:id", (req, res) => {
   const book = books.find((b) => b.id == req.params.id);
 
   if (book) {
